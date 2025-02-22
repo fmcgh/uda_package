@@ -1,7 +1,8 @@
 from setuptools import setup
 
 setup(name='guessing_game_20250222', 
-      version='0.1.0', 
+      version='1.0',
+      description='A number guessing game in termal/cli',
       packages=['guessing_game_20250222'],
       author = 'fmcgh',
       entry_points={
