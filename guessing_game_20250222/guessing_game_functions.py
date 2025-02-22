@@ -2,7 +2,8 @@ import random
 
 # Function if the player should guess the number
 def human_guessing():
-    """This is a number guessing game.
+    """
+    This is a number guessing game.
     The computer will pick a secret number and the user has to guess it.
     """
     max_attempts = int(input('How many guesses would you like? '))
@@ -27,8 +28,10 @@ def human_guessing():
 
 # Function if the computer should guess the number
 def computer_guessing():
-    """This is a number guessing game.
-    The player will pick a secret number and the computer has to guess it"""
+    """
+    This is a number guessing game.
+    The player will pick a secret number and the computer has to guess it
+    """
     max_attempts = int(input('How many guesses do I have? '))
     max_number = int(input('The possible number range is 1 to...? '))
     secret_number = int(input("What is your secret number? I won't tell the computer! "))
@@ -70,7 +73,7 @@ def guessing_game():
     print("-- or for the computer to guess your number!")
     print("Who picks the number to guess?")
 
-    choice = str(input("Enter now: Player or Computer" )).strip().lower()
+    choice = str(input("Enter now: Player or Computer " )).strip().lower()
 
     if choice == "player":
         human_guessing()
