@@ -6,8 +6,8 @@ def human_guessing():
     This is a number guessing game.
     The computer will pick a secret number and the user has to guess it.
     """
-    max_attempts = int(input('How many guesses would you like? '))
     max_number = int(input('The possible number range is 1 to...? '))
+    max_attempts = int(input('How many guesses would you like? '))
     secret_number = random.randint(1, max_number)
     guess = None
 
@@ -32,8 +32,8 @@ def computer_guessing():
     This is a number guessing game.
     The player will pick a secret number and the computer has to guess it
     """
-    max_attempts = int(input('How many guesses do I have? '))
     max_number = int(input('The possible number range is 1 to...? '))
+    max_attempts = int(input('How many guesses do I have? '))
     secret_number = int(input("What is your secret number? I won't tell the computer! "))
     guess = None
     attempt = 0
@@ -43,10 +43,10 @@ def computer_guessing():
     for attempt in range(1, max_attempts + 1):
         guess = random.randint(lower, upper)
         if guess < secret_number:
-            print(f"The computer guessed {guess}. It's too low. Try again.")
+            print(f"The computer guessed {guess}. It's too low. Trying again.")
             lower = guess + 1
         elif guess > secret_number:
-            print(f"The computer guessed {guess}. It's too high. Try again.")
+            print(f"The computer guessed {guess}. It's too high. Trying again.")
             upper = guess - 1
         else:
             print(f"The computer guessed {guess} correctly! It took {attempt} attempt(s).")
@@ -56,7 +56,7 @@ def computer_guessing():
     print("The computer ran out of attempts!" 
           f"\nIt's closest guess was within {abs(secret_number - guess)} numbers"
           f"\nIt used all {max_attempts} attempt(s)."
-          "\nIt will get you next time!")
+          "\nBut it will get you next time!")
 
 
 def guessing_game():
@@ -76,8 +76,8 @@ def guessing_game():
     choice = str(input("Enter now: Player or Computer " )).strip().lower()
 
     if choice == "player":
-        human_guessing()
-    elif choice == "computer":
         computer_guessing()
+    elif choice == "computer":
+        human_guessing()
     else:
         print("Invalid Choice! Please enter 'You' or 'Computer' to start")
